@@ -1,0 +1,14 @@
+{
+	"name": "Metadata Stripper",
+	"version": "0.1",
+	"description": "Removes unneeded metadata from URLs",
+	"background": { 
+		"scripts": ["background.js"]
+	},
+	"manifest_version": 2,
+	"permissions": [
+		"webRequest",
+		"*://*/*",
+		"webRequestBlocking"
+	]
+}
