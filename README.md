@@ -26,3 +26,4 @@ https://www.facebook.com/user
 ## Credits
 
 - [chloe](https://chloe.re)
+- [Source 1](https://stackoverflow.com/questions/12065029/chrome-redirect-extension)
