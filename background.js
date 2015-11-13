@@ -1,7 +1,14 @@
-var host = "https://destination.com";
+var host = "https://destination.com/";
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-         return {redirectUrl: host + details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1]};
+		var d = details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/);
+		var path = d[1];
+		
+		if (path.slice(0, 1) == "/") {
+			path = path.slice(1, path.length);
+		}
+		
+        return {redirectUrl: host + path};
     },
     {
         urls: [
