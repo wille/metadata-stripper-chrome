@@ -2,40 +2,34 @@ chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
 		var d = details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/);
 		
+		var x = document.createElement("a");
+		x.href = details.url;
+
 		// GET query string
-		var path = d[1];
+		var path = x.pathname;
 		
-		
-		// protocol+hostname
-		var url = details.url.slice(0, details.url.length - d[1].length);
-		
-		if (path.slice(0, 1) == "/" && url.slice(url.length - 1, url.length) == "/") {
-			path = path.slice(1, path.length);
-		}
-		
-		if (url === "https://www.facebook.com" && path.indexOf("?") != -1) {
+		if (x.hostname === "www.facebook.com") {
 			// Loop through GET parameters and remove fref etc...
 			
 			// Replace ? with & to not confuse split()
-			var params = path.slice(path.indexOf("?")).replace("?", "&").split("&");
-			
+			var params = x.search.replace("?", "&").split("&");
 			
 			var redirect = false;
+			var newpath = x.pathname + "?";
 			
-			var newpath = path.slice(0, path.indexOf("?") + 1);
+
 			for (var i = 0; i < params.length; i++) {
-				if (params[i] == "fref=ts") {
+				if (params[i] === "fref=ts") {
 					redirect = true;
 				} else {
 					newpath += params[i];
 				}
 			}
-			
+
 			if (redirect) {
-				return {redirectUrl: url + newpath };
+				return { redirectUrl: x.protocol + "//" + x.host + newpath };
 			}
 		}
-		
 		
 		// Return empty response, no action
         return { };
