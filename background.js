@@ -12,34 +12,32 @@ chrome.webRequest.onBeforeRequest.addListener(
 		// GET query string
 		var path = x.pathname;
 		
-		if (x.hostname === "www.facebook.com") {
-			// Loop through GET parameters and remove fref etc...
+		// Loop through GET parameters and remove fref etc...
 			
-			// Replace ? with & to not confuse split()
-			var params = x.search.replace("?", "&").split("&");
+		// Replace ? with & to not confuse split()
+		var params = x.search.replace("?", "&").split("&");
 			
-			var redirect = false;
-			var first = true;
-			var newpath = x.pathname;
+		var redirect = false;
+		var first = true;
+		var newpath = x.pathname;
 			
-			for (var i = 0; i < params.length; i++) {
-				if (params[i].split("=")[0] == "fref") {
+		for (var i = 0; i < params.length; i++) {
+			if (params[i].split("=")[0] == "fref") {
 					redirect = true;
-				} else if (params[i].length > 0) {
-					if (first) {
+			} else if (params[i].length > 0) {
+				if (first) {
 						first = false;
 						newpath += "?";
-					} else {
-						newpath += "&";
-					}
-					
-					newpath += params[i];
+				} else {
+					newpath += "&";
 				}
+					
+				newpath += params[i];
 			}
+		}
 
-			if (redirect) {
-				return { redirectUrl: x.protocol + "//" + x.host + newpath };
-			}
+		if (redirect) {
+			return { redirectUrl: x.protocol + "//" + x.host + newpath };
 		}
 		
 		// Return empty response, no action
