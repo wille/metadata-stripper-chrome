@@ -1,5 +1,13 @@
 var urls = [
 	"*://www.facebook.com/*",
+	"*://www.imdb.com/*",
+	"*://www.youtube.com/*"
+];
+
+var block_params = [
+	"fref",
+	"feature",
+	"ref_"
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(
@@ -22,12 +30,22 @@ chrome.webRequest.onBeforeRequest.addListener(
 		var newpath = x.pathname;
 			
 		for (var i = 0; i < params.length; i++) {
-			if (params[i].split("=")[0] == "fref") {
-					redirect = true;
+			var key = params[i].split("=")[0];
+			var block = false;
+			
+			for (var l = 0; l < block_params.length; l++) {
+				if (key == block_params[l]) {
+					block = true;
+					break;
+				}
+			}
+			
+			if (block) {
+				redirect = true;
 			} else if (params[i].length > 0) {
 				if (first) {
-						first = false;
-						newpath += "?";
+					first = false;
+					newpath += "?";
 				} else {
 					newpath += "&";
 				}
