@@ -19,13 +19,20 @@ chrome.webRequest.onBeforeRequest.addListener(
 			var params = x.search.replace("?", "&").split("&");
 			
 			var redirect = false;
-			var newpath = x.pathname + "?";
+			var first = true;
+			var newpath = x.pathname;
 			
-
 			for (var i = 0; i < params.length; i++) {
 				if (params[i].split("=")[0] == "fref") {
 					redirect = true;
-				} else {
+				} else if (params[i].length > 0) {
+					if (first) {
+						first = false;
+						newpath += "?";
+					} else {
+						newpath += "&";
+					}
+					
 					newpath += params[i];
 				}
 			}
