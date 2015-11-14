@@ -11,9 +11,11 @@
 	"manifest_version": 2,
 	"permissions": [
 		"webRequest",
+		"webRequestBlocking",
+		
 		"*://www.facebook.com/*",
 		"*://www.imdb.com/*",
 		"*://www.youtube.com/*",
-		"webRequestBlocking"
+		"*://twitter.com/*"
 	]
 }

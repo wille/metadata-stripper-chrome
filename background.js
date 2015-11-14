@@ -2,6 +2,7 @@ var urls = [
 	"*://www.facebook.com/*",
 	"*://www.imdb.com/*",
 	"*://www.youtube.com/*"
+	"*://twitter.com/*"
 ];
 
 var block_params = [
@@ -18,6 +19,10 @@ var block_params = [
 	"pf_rd_r",
 	"pf_rd_s",
 	"pf_rd_i",
+	"pf_rd_t",
+	
+	// twitter
+	"src"
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(
