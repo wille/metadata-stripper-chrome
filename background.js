@@ -1,3 +1,7 @@
+var urls = [
+	"*://www.facebook.com/*",
+];
+
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
 		var d = details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/);
@@ -19,7 +23,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 			
 
 			for (var i = 0; i < params.length; i++) {
-				if (params[i] === "fref=ts") {
+				if (params[i].split("=")[0] == "fref") {
 					redirect = true;
 				} else {
 					newpath += params[i];
@@ -35,9 +39,7 @@ chrome.webRequest.onBeforeRequest.addListener(
         return { };
     },
     {
-        urls: [
-            "*://www.facebook.com/*",
-        ],
+        urls,
         types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "object", "xmlhttprequest", "other"]
     },
     ["blocking"]
