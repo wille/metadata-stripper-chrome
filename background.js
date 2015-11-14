@@ -5,9 +5,19 @@ var urls = [
 ];
 
 var block_params = [
+	// facebook
 	"fref",
+	
+	// youtube
 	"feature",
-	"ref_"
+
+	// imdb
+	"ref_", 
+	"pf_rd_m",
+	"pf_rd_p",
+	"pf_rd_r",
+	"pf_rd_s",
+	"pf_rd_i",
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(
