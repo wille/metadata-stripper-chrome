@@ -12,10 +12,6 @@
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
-		
-		"*://www.facebook.com/*",
-		"*://www.imdb.com/*",
-		"*://www.youtube.com/*",
-		"*://twitter.com/*"
+		"<all_urls>"
 	]
 }

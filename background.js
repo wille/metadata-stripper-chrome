@@ -1,10 +1,3 @@
-var urls = [
-	"*://www.facebook.com/*",
-	"*://www.imdb.com/*",
-	"*://www.youtube.com/*"
-	"*://twitter.com/*"
-];
-
 var block_params = [
 	// facebook
 	"fref",
@@ -77,7 +70,9 @@ chrome.webRequest.onBeforeRequest.addListener(
         return { };
     },
     {
-        urls,
+        urls: [
+			"<all_urls>"
+		],
         types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "object", "xmlhttprequest", "other"]
     },
     ["blocking"]
