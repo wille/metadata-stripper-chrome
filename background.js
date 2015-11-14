@@ -15,7 +15,12 @@ var block_params = [
 	"pf_rd_t",
 	
 	// twitter
-	"src"
+	"src",
+	
+	// urchen tracking module
+	"utm_source",
+	"utm_campaign",
+	"utm_medium",
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(
