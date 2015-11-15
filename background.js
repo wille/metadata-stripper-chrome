@@ -2,7 +2,8 @@ var block_params = [
 	// facebook
 	"fref",
 	"pnref",
-	
+	"ref",
+
 	// youtube
 	"feature",
 
