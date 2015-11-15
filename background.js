@@ -16,6 +16,7 @@ var block_params = [
 	
 	// twitter
 	"src",
+	"ref_src",
 	
 	// urchen tracking module
 	"utm_source",
