@@ -19,6 +19,7 @@ var block_params = [
 	// twitter
 	"src",
 	"ref_src",
+	"lang",
 	
 	// urchen tracking module
 	"utm_source",
