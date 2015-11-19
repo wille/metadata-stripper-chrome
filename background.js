@@ -1,8 +1,27 @@
 var block_params = [
-	// facebook
-	"fref",
+	{
+		params: [ "fref", "pnref", "ref" ],
+		host: "www.facebook.com"
+	},
+	/*{
+		params: "fref",
+		host: "www.facebook.com"
+	},
+	{
+		params: "fref",
+		host: "www.facebook.com"
+	},
+	{
+		params: "fref",
+		host: "www.facebook.com"
+	},
+	{
+		params: "fref",
+		host: "www.facebook.com"
+	},*/
+	
+	/*// facebook
 	"pnref",
-	"ref",
 
 	// youtube
 	"feature",
@@ -24,7 +43,7 @@ var block_params = [
 	// urchen tracking module
 	"utm_source",
 	"utm_campaign",
-	"utm_medium",
+	"utm_medium",*/
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(
@@ -51,9 +70,15 @@ chrome.webRequest.onBeforeRequest.addListener(
 			var block = false;
 			
 			for (var l = 0; l < block_params.length; l++) {
-				if (key == block_params[l]) {
-					block = true;
-					break;
+				var host_allowed = new RegExp("^" + block_params[l].host.replace("*", ".*") + "$").test(x.hostname);
+				
+				if (host_allowed) {
+					for (var j = 0; j < block_params[l].params.length; j++) {
+						if (key == block_params[l].params[j]) {
+							block = true;
+							break;
+						}
+					}
 				}
 			}
 			
