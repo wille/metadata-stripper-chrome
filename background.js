@@ -3,47 +3,22 @@ var block_params = [
 		params: [ "fref", "pnref", "ref" ],
 		host: "www.facebook.com"
 	},
-	/*{
-		params: "fref",
-		host: "www.facebook.com"
+	{
+		params: [ "feature" ],
+		host: "www.youtube.com"
 	},
 	{
-		params: "fref",
-		host: "www.facebook.com"
+		params: [ "ref_", "pf_rd_m", "pf_rd_p", "pf_rd_r", "pf_rd_s", "pf_rd_i", "pf_rd_t" ],
+		host: "www.imdb.com"
 	},
 	{
-		params: "fref",
-		host: "www.facebook.com"
+		params: [ "src", "ref_src", "lang" ],
+		host: "twitter.com"
 	},
 	{
-		params: "fref",
-		host: "www.facebook.com"
-	},*/
-	
-	/*// facebook
-	"pnref",
-
-	// youtube
-	"feature",
-
-	// imdb
-	"ref_", 
-	"pf_rd_m",
-	"pf_rd_p",
-	"pf_rd_r",
-	"pf_rd_s",
-	"pf_rd_i",
-	"pf_rd_t",
-	
-	// twitter
-	"src",
-	"ref_src",
-	"lang",
-	
-	// urchen tracking module
-	"utm_source",
-	"utm_campaign",
-	"utm_medium",*/
+		params: [ "utm_source", "utm_campaign", "utm_medium" ],
+		host: "*"
+	},
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(
