@@ -32,6 +32,10 @@ var block_params = [
 		host: "www.ebay.com"
 	},
 	{
+		params: [ "from", "account", "campaign", "post_id", "Paid_support", "linkId", "ref", "src" ],
+		host: "www.yahoo.com"
+	},
+	{
 		params: [ "utm_source", "utm_campaign", "utm_medium", "utm_content" ],
 		host: "*"
 	},
