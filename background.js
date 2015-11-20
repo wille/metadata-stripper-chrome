@@ -16,7 +16,23 @@ var block_params = [
 		host: "twitter.com"
 	},
 	{
-		params: [ "utm_source", "utm_campaign", "utm_medium" ],
+		params: [ "trk" ],
+		host: "*linkedin.com"
+	},
+	{
+		params: [ "cc" ],
+		host: "www.bing.com"
+	},
+	{
+		params: [ "ocid" ],
+		host: "www.msn.com"
+	},
+	{
+		params: [ "roken2" ],
+		host: "www.ebay.com"
+	},
+	{
+		params: [ "utm_source", "utm_campaign", "utm_medium", "utm_content" ],
 		host: "*"
 	},
 ];
