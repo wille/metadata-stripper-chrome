@@ -35,6 +35,30 @@ var block_params = [
 		params: [ "from", "account", "campaign", "post_id", "Paid_support", "linkId", "ref", "src" ],
 		host: "www.yahoo.com"
 	},
+		{
+		params: [ "mbid" ],
+		host: "www.wired.com"
+	},
+	{
+		params: [ "utm_term", "bftw", "bffbmain" ],
+		host: "www.buzzfeed.com"
+	},
+	{
+		params: [ "ocid", "ns_mchannel", "ns_source", "ns_campaign", "ns_linkname" ],
+		host: "www.bbc.com"
+	},
+	{
+		params: [ "smid", "smtyp" ],
+		host: "www.nytimes.com"
+	},
+	{
+		params: [ "ito" ],
+		host: "www.dailymail.co.uk"
+	},
+	{
+		params: [ "scid", "adbpl", "adbpr", "adbid" ],
+		host: "*adobe.com"
+	},
 	{
 		params: [ "utm_source", "utm_campaign", "utm_medium", "utm_content" ],
 		host: "*"
