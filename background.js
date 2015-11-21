@@ -4,7 +4,7 @@ var block_params = [
 		host: "www.facebook.com"
 	},
 	{
-		params: [ "feature" ],
+		params: [ "feature", "app" ],
 		host: "www.youtube.com"
 	},
 	{
