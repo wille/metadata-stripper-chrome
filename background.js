@@ -1,6 +1,6 @@
 var block_params = [
 	{
-		params: [ "fref", "pnref", "ref", "__mref" ],
+		params: [ "fref", "pnref", "ref", "__mref", "sk", "source" ],
 		host: "www.facebook.com"
 	},
 	{
