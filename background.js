@@ -7,6 +7,10 @@ var block_params = [
 		params: [ "fref", "pnref", "ref", "__mref", "sk", "source" ],
 		host: "www.facebook.com"
 	},
+		{
+		params: [ "mt" ],
+		host: "http://www.theregister.co.uk/"
+	},
 	{
 		params: [ "feature", "app" ],
 		host: "www.youtube.com"
