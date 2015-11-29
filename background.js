@@ -4,7 +4,7 @@ var block_params = [
 		host: "www.reddit.com"
 	},
 	{
-		params: [ "fref", "pnref", "ref", "__mref", "sk", "source" ],
+		params: [ "fref", "pnref", "ref", "__mref", "sk", "source", "hc_location" ],
 		host: "www.facebook.com"
 	},
 		{
