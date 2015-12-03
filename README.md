@@ -1,6 +1,6 @@
 # metadata-stripper-chrome
 
-The goal of this project is to remove unneeded metadata on common sites such as
+Removes unneeded metadata in HTTP GET requests on common sites such as
 
 - Facebook
 - Twitter
