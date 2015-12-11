@@ -36,7 +36,7 @@ var block_params = [
 		host: "www.msn.com"
 	},
 	{
-		params: [ "roken2" ],
+		params: [ "roken2", "_trksid", "_trkparms" ],
 		host: "www.ebay.com"
 	},
 	{
