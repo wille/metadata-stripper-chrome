@@ -11,6 +11,7 @@
 	"manifest_version": 2,
 	"permissions": [
 		"webRequest",
+		"webRequestBlocking",
 		"<all_urls>"
 	]
 }
