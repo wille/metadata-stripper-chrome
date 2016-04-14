@@ -4,7 +4,7 @@ var block_params = [
 		host: "www.reddit.com"
 	},
 	{
-		params: [ "fref", "pnref", "ref", "__mref", "sk", "source", "hc_location" ],
+		params: [ "fref", "pnref", "ref", "__mref", "source", "hc_location" ],
 		host: "www.facebook.com"
 	},
 		{
@@ -36,7 +36,7 @@ var block_params = [
 		host: "www.msn.com"
 	},
 	{
-		params: [ "roken2" ],
+		params: [ "roken2", "_trksid", "_trkparms" ],
 		host: "www.ebay.com"
 	},
 	{
