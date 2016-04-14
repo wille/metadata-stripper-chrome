@@ -1,5 +1,10 @@
 # metadata-stripper-chrome
 
+![Chrome Web Store](https://img.shields.io/chrome-web-store/v/hmmgckknpnciikcibihcmkcpbjocoelg.svg)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/d/hmmgckknpnciikcibihcmkcpbjocoelg.svg?maxAge=2592000)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/hmmgckknpnciikcibihcmkcpbjocoelg.svg?maxAge=2592000)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/rating-count/hmmgckknpnciikcibihcmkcpbjocoelg.svg?maxAge=2592000)
+
 Removes unneeded metadata in HTTP GET requests on common sites such as
 
 - Facebook
