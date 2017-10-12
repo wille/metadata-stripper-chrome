@@ -6,7 +6,8 @@
     "jsRules": {},
     "rules": {
         "trailing-comma": false,
-        "interface-name": false
+        "interface-name": false,
+        "prefer-const": false
     },
     "rulesDirectory": []
 }

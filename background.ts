@@ -20,7 +20,7 @@ chrome.webRequest.onBeforeRequest.addListener((details: WebRequestBodyDetails) =
         // If we should block (redirect to site without any GET parameters)
         let block = false;
 
-        for (let rule of block_params) {
+        for (let rule of rules) {
             // Check if rule is valid for this URL
             // Supports wildcards
             // There is a global rule '*', so this should always be valid
