@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "outFile": "background.js"
+        "outFile": "background.js",
+        "removeComments": true
     },
     "include": [
         "rules.ts",
