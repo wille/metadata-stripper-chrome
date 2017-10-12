@@ -3,77 +3,147 @@ interface Rule {
     params: string[];
 }
 
-var block_params: Rule[] = [
+const rules: Rule[] = [
     {
-        params: ["ref", "source"],
-        host: "www.reddit.com"
+        host: "www.reddit.com",
+        params: [
+            "ref",
+            "source"
+        ]
     },
     {
-        params: ["fref", "pnref", "ref", "__mref", "source", "hc_location"],
-        host: "www.facebook.com"
+        host: "www.facebook.com",
+        params: [
+            "fref",
+            "pnref",
+            "ref",
+            "__mref",
+            "source",
+            "hc_location"
+        ]
     },
     {
-        params: ["mt"],
-        host: "http://www.theregister.co.uk/"
+        host: "http://www.theregister.co.uk/",
+        params: [
+            "mt"
+        ]
     },
     {
-        params: ["feature", "app"],
-        host: "www.youtube.com"
+        host: "www.youtube.com",
+        params: [
+            "feature",
+            "app"
+        ]
     },
     {
-        params: ["ref_", "pf_rd_m", "pf_rd_p", "pf_rd_r", "pf_rd_s", "pf_rd_i", "pf_rd_t"],
-        host: "www.imdb.com"
+        host: "www.imdb.com",
+        params: [
+            "ref_",
+            "pf_rd_m",
+            "pf_rd_p",
+            "pf_rd_r",
+            "pf_rd_s",
+            "pf_rd_i",
+            "pf_rd_t"
+        ]
     },
     {
-        params: ["src", "ref_src", "lang"],
-        host: "twitter.com"
+        host: "twitter.com",
+        params: [
+            "src",
+            "ref_src",
+            "lang"]
     },
     {
-        params: ["trk"],
-        host: "*linkedin.com"
+        host: "*linkedin.com",
+        params: [
+            "trk"
+        ]
     },
     {
-        params: ["cc"],
-        host: "www.bing.com"
+        host: "www.bing.com",
+        params: [
+            "cc"
+        ]
     },
     {
-        params: ["ocid"],
-        host: "www.msn.com"
+        host: "www.msn.com",
+        params: [
+            "ocid"
+        ]
     },
     {
-        params: ["roken2", "_trksid", "_trkparms"],
-        host: "www.ebay.com"
+        host: "www.ebay.com",
+        params: [
+            "roken2",
+            "_trksid",
+            "_trkparms"]
     },
     {
-        params: ["from", "account", "campaign", "post_id", "Paid_support", "linkId", "ref", "src"],
-        host: "www.yahoo.com"
+        host: "www.yahoo.com",
+        params: [
+            "from",
+            "account",
+            "campaign",
+            "post_id",
+            "Paid_support",
+            "linkId",
+            "ref",
+            "src"]
     },
     {
-        params: ["mbid"],
-        host: "www.wired.com"
+        host: "www.wired.com",
+        params: [
+            "mbid"
+        ]
     },
     {
-        params: ["utm_term", "bftw", "bffbmain"],
-        host: "www.buzzfeed.com"
+        host: "www.buzzfeed.com",
+        params: [
+            "utm_term",
+            "bftw",
+            "bffbmain"
+        ]
     },
     {
-        params: ["ocid", "ns_mchannel", "ns_source", "ns_campaign", "ns_linkname"],
-        host: "www.bbc.com"
+        host: "www.bbc.com",
+        params: [
+            "ocid",
+            "ns_mchannel",
+            "ns_source",
+            "ns_campaign",
+            "ns_linkname"
+        ]
     },
     {
-        params: ["smid", "smtyp"],
-        host: "www.nytimes.com"
+        host: "www.nytimes.com",
+        params: [
+            "smid",
+            "smtyp"
+        ]
     },
     {
-        params: ["ito"],
-        host: "www.dailymail.co.uk"
+        host: "www.dailymail.co.uk",
+        params: [
+            "ito"
+        ]
     },
     {
-        params: ["scid", "adbpl", "adbpr", "adbid"],
-        host: "*adobe.com"
+        host: "*adobe.com",
+        params: [
+            "scid",
+            "adbpl",
+            "adbpr",
+            "adbid"
+        ]
     },
     {
-        params: ["utm_source", "utm_campaign", "utm_medium", "utm_content"],
-        host: "*"
+        host: "*",
+        params: [
+            "utm_source",
+            "utm_campaign",
+            "utm_medium",
+            "utm_content"
+        ]
     },
 ];
